@@ -1,6 +1,7 @@
 package streamApiSample;
 
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
 
 public class StudentList {
@@ -12,7 +13,10 @@ public class StudentList {
 		students.add(new Student("Shin", 60));
 		students.add(new Student("Takuya", 80));
 
+		System.out.println(students);
 		students.stream().filter(s -> s.getScore() >= 70).forEach(s -> System.out.println(s.getName()));
+		Collections.sort(students, (student1, student2) -> Integer.compare(student1.getScore(), student2.getScore()));
+		System.out.println(students);
 	}
 
 }

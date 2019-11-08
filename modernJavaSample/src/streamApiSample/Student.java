@@ -37,4 +37,8 @@ public class Student {
 		this.score = score;
 	}
 
+	public String toString() {
+		return name +":" + score;
+	}
+
 }
